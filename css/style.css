@@ -31,14 +31,14 @@ body{
 }
 /* 컨테이너 */
 .container{
-  background: linear-gradient(to bottom, #ccc, #ccc 50%, #fff 60%, #fff 100%);
+  background: linear-gradient(to bottom, #eee, #eee 50%, #fff 60%, #fff 100%);
 }
 .header, .visual, .main, .slogan, .footer {
   width: 940px;
   margin: 0 auto; 
 }
 .bg-footer{
-  background: linear-gradient(to bottom, #ccc, #ccc 50%, #fff 60%, #fff 100%);
+  background: linear-gradient(to bottom, #eee, #eee 50%, #fff 60%, #fff 100%);
 }
 
 /* 안내링크 */
@@ -76,7 +76,7 @@ body{
   position: absolute;
   top: 45px;
   left: 65px;
-  background: #ccc;
+  background: #eee;
 }
 
 /* 메인 메뉴 */
