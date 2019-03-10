@@ -1,27 +1,88 @@
 @charset "utf-8";
 /* 스타일 초기화 */
 *, *::before, *::after{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+html{
+  font-size: 15px;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+/* 숨김 컨텐츠 */
+.readable-hidden{
+  position: absolute;
+  width:1px;
+  height: 1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  margin: -1px;
+}
+/* 기본스타일 */
+body{
+  color: #181818;
+  font-size: 1.4rem;
+}
+/* 컨테이너 */
+.container{
+  background: linear-gradient(to bottom, #ccc, #ccc 50%, #fff 60%, #fff 100%);
+}
 .header, .visual, .main, .slogan, .footer {
-  background: yellow;
   width: 940px;
   margin: 0 auto; 
 }
 .bg-footer{
-  background: purple;
+  background: linear-gradient(to bottom, #ccc, #ccc 50%, #fff 60%, #fff 100%);
+}
+
+/* 안내링크 */
+.member{
+  text-align: right;
+  font-size: 0;
+  padding: 2px 0;
+  margin-right: -10px;
+}
+
+
+.member li, .member a{
+  display:inline-block;
+}
+.member li{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.bar::before{
+  content: ":";
+  margin:0 1px;
+}
+.member a{
+  padding: 5 10px;
 }
 /* 헤더 */
 .header{
   position: relative;
+  padding: 0 30px 45px;
+  background: lime;
+  border-radius:0 0 15px 15px;
 }
 /* 로고 */
 .logo{
-  background: blue;
   position: absolute;
   top: 45px;
   left: 65px;
+  background: #ccc;
+}
+
+/* 메인 메뉴 */
+.menu{
+  background: #abd3ee 31% linear-gradient(to bottom, #ebf1f6 0%,#abd3ee 31%,#89c3eb 50%,#89c3eb 70%,#d5ebfb 100%);
+  margin-top: 10px;
 }
 /* 비주얼 */
 .visual{
