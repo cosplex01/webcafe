@@ -31,14 +31,14 @@ body{
 }
 /* 컨테이너 */
 .container{
-  background: linear-gradient(to bottom, #eee, #eee 50%, #fff 60%, #fff 100%);
+  background: linear-gradient(to bottom, #eee, #eee 50%, #f0ff 60%, #f0ff 100%);
 }
 .header, .visual, .main, .slogan, .footer {
   width: 940px;
   margin: 0 auto; 
 }
 .bg-footer{
-  background: linear-gradient(to bottom, #eee, #eee 50%, #fff 60%, #fff 100%);
+  background: linear-gradient(to bottom, #eee, #eee 50%, #f0ff 60%, #f0ff 100%);
 }
 
 /* 안내링크 */
@@ -63,6 +63,7 @@ body{
 }
 .member a{
   padding: 5 10px;
+  margin:10px;
 }
 /* 헤더 */
 .header{
