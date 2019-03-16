@@ -46,12 +46,13 @@ body{
   font-family: 'Spoqa Han Sans', 'Sans-serif';
   font-weight: 400;
   line-height: 1.15;
-  background: #fff;
+  background: linear-gradient(to bottom, #ccc,#ccc 50%,#fff 60%,#fff 100%);
+  
 }
 
 /* 컨테이너 */
 .container{
-  background: linear-gradient(to bottom, #ccc,#ccc 50%,#fff 60%,#fff 100%);
+  background: url("images/bg_flower.png") no-repeat 50% 0;
 }
 
 .header, .visual, .main, .slogan, .footer{
@@ -125,6 +126,7 @@ body{
 
 .menu-act .sub-menu{
   display: block;
+  /* 세로 출력되는 것을 블록 css명령어를 이용해서 가로배치함 */
 }
 
 .sub-menu1, .sub-menu2, .sub-menu3{
@@ -173,9 +175,6 @@ body{
 }
 
 /* 비주얼 */
-.visual{
-  height: 120px;
-}
 @keyframes textAni{
   0%{
     font-size: 12px;
@@ -188,12 +187,48 @@ body{
     transform: translate(400px,75px);
   }
 }
+@keyframes flowerAni{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.visual{
+  height: 120px;
+  position: relative;
+}
+.visual::before, .visual::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: flowerAni;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.visual::before{
+  background-image: url("images/ani_flower_01.png"), url("images/ani_flower_02.png");
+  background-position: 0 -10px, 670px 0;
+}
+.visual::after{
+  background-image: url("images/ani_flower_03.png"), url("images/ani_flower_04.png");
+  background-position: 300px 0, 800px 0;
+  animation-delay: 1s;
+  /* animation-play-state: paused; */
+  animation-timing-function: ease-in-out;
+}
 .visual-text{
   font-family: Georgia, 'Times New Roman', Times, serif;
   animation-name: textAni;
   animation-duration: 5s;
   animation-fill-mode: forwards;
-  background: #ff0;
   width: 545px;
 }
 /* 메인콘텐츠 */
