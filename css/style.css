@@ -1,44 +1,65 @@
 @charset "utf-8";
+
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+
+@import url("fontello.css");
+
 /* 스타일 초기화 */
 *, *::before, *::after{
-  box-sizing: border-box;
+  box-sizing:border-box;
   margin: 0;
   padding: 0;
 }
+
 html{
-  font-size: 15px;
+  font-size: 10px;
 }
+
 ul{
   list-style-type: none;
 }
+
 a{
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
-/* 숨김 컨텐츠 */
+
+/* 숨김 콘텐츠 */
 .readable-hidden{
   position: absolute;
-  width:1px;
-  height: 1px;
-  overflow: hidden;
+  overflow:hidden;
   clip:rect(0,0,0,0);
   margin: -1px;
 }
+
+/* 클래스 모듈 */  /* float 이슈를 해결하기 위한 clear 기능 */
+.clearfix::after{
+  content:"";
+  display:block;
+  clear: both;
+}
+
 /* 기본스타일 */
 body{
-  color: #181818;
+  color:#181818;
   font-size: 1.4rem;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-weight: 400;
+  line-height: 1.15;
+  background: #fff;
 }
+
 /* 컨테이너 */
 .container{
-  background: linear-gradient(to bottom, #eee, #eee 50%, #f0ff 60%, #f0ff 100%);
+  background: linear-gradient(to bottom, #ccc,#ccc 50%,#fff 60%,#fff 100%);
 }
-.header, .visual, .main, .slogan, .footer {
+
+.header, .visual, .main, .slogan, .footer{
   width: 940px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 .bg-footer{
-  background: linear-gradient(to bottom, #eee, #eee 50%, #f0ff 60%, #f0ff 100%);
+  background: linear-gradient(to bottom, #ccc,#ccc 50%,#fff 60%,#fff 100%);
 }
 
 /* 안내링크 */
@@ -49,62 +70,129 @@ body{
   margin-right: -10px;
 }
 
-
 .member li, .member a{
-  display:inline-block;
+  display: inline-block;
 }
+
 .member li{
   font-size: 1.4rem;
   text-transform: uppercase;
 }
+
 .bar::before{
   content: ":";
   margin:0 1px;
 }
+
 .member a{
   padding: 5px 10px;
 }
+
 /* 헤더 */
 .header{
+  background: #fff;
   position: relative;
   padding: 0 30px 45px;
-  background: lime;
-  border-radius:0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
 }
 /* 로고 */
 .logo{
   position: absolute;
-  top: 45px;
+  top: 51px;
   left: 65px;
-  background: #eee;
 }
 
 /* 메인 메뉴 */
 .menu{
-  background: #abd3ee 31% linear-gradient(to bottom, #ebf1f6 0%,#abd3ee 31%,#89c3eb 50%,#89c3eb 70%,#d5ebfb 100%);
+  background:#ff7c11 linear-gradient(to bottom, #ffa042 0%,#ff7c11 30%,#ff7c11 70%,#ffa042 100%);
   margin-top: 10px;
+  padding-left:225px;
+  border-top: 2px solid #181818;
+  border-radius: 0 0 5px 5px;
 }
+
+.menu > li{
+  float: left;
+  position: relative;
+}
+
+.sub-menu{
+  position:absolute;
+  top: 55px;
+  display: none;
+  white-space: nowrap;
+}
+
+.menu-act .sub-menu{
+  display: block;
+}
+
+.sub-menu1, .sub-menu2, .sub-menu3{
+  left:0;
+}
+
+.sub-menu4, .sub-menu5, .sub-menu6{
+  right: 0;
+}
+
+.sub-menu li{
+  display: inline-block;
+}
+
+.menu-item-text{
+  font-size:1.7rem;
+  font-weight: 600;
+  color:#fff;
+  padding:1em 18px;
+  display:block;
+  border-left: 1px solid #fff;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+
+.menu-act .menu-item-text{
+  color: #ff0;
+  position: relative;
+}
+
+.menu-act .menu-item-text::after{
+  position: absolute;
+  width:calc(100% - 36px);
+  bottom: -2px;
+  content:"";
+  display: block;
+  border-top: 2px solid #000;  
+}
+
+.sub-menu li, .sub-menu a{
+  display: inline-block;
+}
+
+.sub-menu a{
+  padding: 10px 0;
+  margin-right: 10px;
+}
+
 /* 비주얼 */
 .visual{
- height: 120px;
+  height: 120px;
 }
 /* 메인콘텐츠 */
 .main{
-  background:lime;
+  background: lime;
   min-height: 450px;
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row;
+  flex-direction: low;
 }
 .group1{
-  background: pink;
+  background:pink;
   width: 250px;
 }
 .group2{
-  background: pink;
+  background:pink;
   width: 380px;
 }
 .group3{
-  background: pink;
+  background:pink;
   width: 190px;
 }
