@@ -465,7 +465,6 @@ body{
 }
 /* 새소식 */
 .news{
-  background: yellow;
   position: relative;
   margin-top: 20px;
 }
@@ -487,15 +486,15 @@ body{
   margin-top:35px;
 }
 .news-item{
-  position: relative;
   padding-left: 130px;
+  position: relative;
 }
 .news-item h3{
   font-size: 1.4rem;
 }
 .news-item p{
   margin-top:10px;
-  line-height: 1.5rem;
+  line-height: 1.5em;
 }
 .news-item time{
   display: block;
@@ -507,7 +506,7 @@ body{
   left: 0;
   text-align: center;
 }
-.news-item-thumnail img{
+.news-item-thumbnail img{
   box-shadow: 0 15px 15px 0 #000;
   margin-bottom: 15px;
 }
