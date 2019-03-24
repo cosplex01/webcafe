@@ -64,7 +64,7 @@ body{
   margin: 0 auto;
 }
 .bg-footer{
-  background: linear-gradient(to bottom, #ccc,#ccc 50%,#fff 60%,#fff 100%);
+  background: linear-gradient(to bottom, #ccc,#ccc 20%,#fff 80%,#fff 100%);
 }
 
 /* 안내링크 */
